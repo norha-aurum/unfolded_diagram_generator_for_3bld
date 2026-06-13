@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unfolded Diagram Generator for 3BLD</title>
+<title>Topological 3BLD Viewer</title>
 <style>
   /* 基本スタイル */
   body {
@@ -111,7 +111,9 @@
   }
   polygon {
     stroke: #000;
-    stroke-width: 0.01;
+    stroke-width: 0.02;
+    stroke-linejoin: "round";
+    stroke-linecap: "round";
   }
 </style>
 </head>
@@ -120,7 +122,7 @@
 <div id="app">
   <!-- Top Page -->
   <div id="top-page" class="page active">
-    <h2>3BLD Inspection Training</h2>
+    <h2>Topological 3BLD Viewer</h2>
     <div>Current Scramble:</div>
     <div id="current-scramble"></div>
 
@@ -135,7 +137,7 @@
 
     <div class="button-container">
       <button id="btn-apply">Apply Scramble</button>
-      <button id="btn-view">View</button>
+      <button id="btn-view">Show Cube</button>
     </div>
   </div>
 
