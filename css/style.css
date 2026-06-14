@@ -1,0 +1,110 @@
+  /* 基本スタイル */
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* アプリのコンテナ */
+  #app {
+    max-width: 600px;
+    margin: auto;
+    padding: 16px;
+  }
+
+  /* 各ページ（Top / View）の切り替え用 */
+  .page {
+    display: none;
+  }
+  .page.active {
+    display: block;
+  }
+
+  /* Scramble表示 */
+  #current-scramble {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 16px 0;
+    min-height: 3rem;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+  }
+
+  /* 入力ウィンドウ */
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 1.2rem;
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+    margin-bottom: 8px;
+  }
+
+  /* エラーメッセージ */
+  #error-msg {
+    color: #ff5555;
+    font-size: 0.9rem;
+    height: 1.5rem;
+    visibility: hidden;
+    margin-bottom: 8px;
+  }
+
+  /* ボタンスタイル */
+  button {
+    padding: 12px 0;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    background: #222;
+    color: #fff;
+    border: 1px solid #555;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #333;
+  }
+
+  /* ボタンのグリッド・Flex配置 */
+  .button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 400px) {
+    .button-container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .full-width {
+      grid-column: 1 / 3;
+    }
+  }
+
+  /* SVG用のスタイル */
+  .svg-container {
+    background: #222;
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+    background: #111;
+  }
+  polygon {
+    stroke: #000;
+    stroke-width: 0.02;
+    stroke-linejoin: "round";
+    stroke-linecap: "round";
+  }
