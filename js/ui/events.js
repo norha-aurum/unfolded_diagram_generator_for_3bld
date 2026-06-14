@@ -41,6 +41,16 @@ document.getElementById('btn-view').addEventListener('click', () => {
   document.getElementById('view-page').classList.add('active');
 });
 
+document.getElementById('btn-readme').addEventListener('click', () => {
+  document.getElementById('top-page').classList.remove('active');
+  document.getElementById('readme-page').classList.add('active');
+});
+
+document.getElementById('btn-readme-back').addEventListener('click', () => {
+  document.getElementById('readme-page').classList.remove('active');
+  document.getElementById('top-page').classList.add('active');
+});
+
 document.getElementById('btn-top').addEventListener('click', () => {
   document.getElementById('view-page').classList.remove('active');
   document.getElementById('top-page').classList.add('active');

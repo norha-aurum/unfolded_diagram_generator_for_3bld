@@ -44,14 +44,14 @@ export function isValidScramble(str) {
   if (moves.length < 1 || moves.length > 30) return false;
 
   const validRegex = /^[UDRLFB][2\']?$/i;
-  let lastAxis = -1;
+  let lastFace = "";
 
   for (let i = 0; i < moves.length; i++) {
     const m = moves[i];
     if (!validRegex.test(m)) return false;
-    const axis = getAxis(m);
-    if (axis === -1 || axis === lastAxis) return false; // 無効文字 or 同一軸連続
-    lastAxis = axis;
+    const face = m.charAt(0).toUpperCase();
+    if (face === lastFace) return false;
+    lastFace = face;
   }
   return true;
 }
