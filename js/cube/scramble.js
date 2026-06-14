@@ -61,6 +61,11 @@ export function applyScramble(scrambleStr) {
   initCube(); // 初期状態に戻す
   state.scramble = scrambleStr.toUpperCase();
   document.getElementById('current-scramble').innerText = state.scramble;
+
+  const viewScramble = document.getElementById('view-scramble');
+  if (viewScramble) {
+  viewScramble.innerText = state.scramble;
+  }
   
   if(state.scramble.trim() === "") return;
 

@@ -1,4 +1,5 @@
 import { generateRandomScramble, applyScramble, isValidScramble } from "../cube/scramble.js";
+import { state } from "../state/appState.js";
 
 // --- イベント制御・UIロジック ---
 
@@ -15,6 +16,10 @@ document.getElementById('btn-generate').addEventListener('click', () => {
   document.getElementById('input-scramble').value = ""; // 入力ウィンドウをクリア
   const newScramble = generateRandomScramble();
   applyScramble(newScramble);
+});
+
+document.getElementById('btn-copy').addEventListener('click', async () => {
+  await navigator.clipboard.writeText(state.scramble);
 });
 
 document.getElementById('btn-apply').addEventListener('click', () => {
